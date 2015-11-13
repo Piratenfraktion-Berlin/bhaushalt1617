@@ -1,0 +1,87 @@
+@import '../bower_components/font-awesome/css/font-awesome.min.css'
+@font-face {
+  font-family: 'PoliticsHeadBold';
+  src: url('../fonts/PoliticsHeadv1_9.eot');
+  src: local('â˜º'), url('../fonts/PoliticsHeadv1_9.woff') format('woff'), url('../fonts/PoliticsHeadv1_9.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@import 'variables'
+@import 'normalize'
+@import 'helper'
+@import 'card'
+@import 'chart'
+
+  
+body.app-body
+  color: $fontblack
+  font-size: 1em
+  line-height: 1.4
+  font-family: "Open Sans", sans-serif
+
+.app-wrapper
+  max-width: 1264px
+  width: 96%
+  background: white
+  margin: 0 auto
+  overflow: hidden
+  line-height: 1.4
+  
+  h1
+    font-family: 'PoliticsHeadBold', sans-serif
+    font-weight: normal
+    font-size: 36px
+    margin: 0
+    line-height:1
+  
+  h2
+    color: $fontgrey
+    font-weight: 400
+    margin: 0 0 1.25em 0
+    font-size: 17px
+    line-height: 1.4
+  
+  p
+    margin:0
+  
+  .scroll-top
+    position: fixed
+    bottom: 0
+    right: 20px
+    background: rgba(255,255,255,.8)
+    padding: 1em
+    cursor: pointer
+    
+
+@media only screen and (min-width: 786px)
+  .app-wrapper
+    h1
+      font-size: 50px
+    h2
+      font-size: 26px
+    #vis
+      font-size: 13px
+    .bubble-label
+      display: block
+    .chart-info
+      max-width: 380px
+    #cards 
+      p
+        font-size: 15px
+      .card 
+        padding: 1.5em 0
+        .card-title-name 
+          font-size:36px
+        .card-subtitle 
+          font-size:24px
+        .card-change 
+          right: 0
+          left: auto
+          top:23px
+          font-size: 32px
+        .card-person
+          .card-person-name 
+            font-size: 19px
+        .card-piratenfraktion
+          .card-piratenfraktion-title 
+            font-size: 19px

@@ -1,0 +1,19 @@
+{
+  "name": "piratenfraktion-doppelhaushalt",
+  "version": "1.0.0",
+  "authors": ["Piratenfraktion Berlin"],
+  "description": "Visualisierung Doppelhaushalt",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.4.0"
+  }
+}

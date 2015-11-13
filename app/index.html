@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Visualisierung Doppelhaushalt - Piratenfraktion">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" id="opensans-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700" type="text/css" media="all">
+    <title>Visualisierung Doppelhaushalt - Piratenfraktion</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="app-body">
+    
+
+
+
+
+
+    <!-- Wordpress Content Start -->
+    
+    <!-- 
+        <link rel="stylesheet" href="url/of/main.css">
+    -->
+
+    
+    <div class="app-wrapper" id="top">
+        
+        <h1>Visualisierung Doppelhaushalt</h1>
+        
+        <h2>Die Piratenfraktion hat den Berliner Doppelhaushalt ausgewertet und analysiert</h2>
+        
+
+        <div id="vis" class="loading">
+
+            <div class="chart-tooltip"></div>
+
+            <div class="loader">
+                <i class="fa-spinner fa fa-spin"></i>
+            </div>
+            
+            <div class="chart-info clearfix">
+                <div class="legend"></div>
+                <div class="info"data-template="chart-info-template"></div>
+            </div>
+
+            <div class="source" data-template="chart-source-template"></div>
+        </div>
+        
+        <div id="cards"></div>
+        
+
+        <div class="scroll-top" data-template="scroll-top-template"></div>
+    
+    </div>
+
+    
+
+    <!-- Tooltip Template -->
+    <script type="hogan/template" id="tt-template">
+        <div class="tooltip-inner">
+          <div class="tt-title">{{name}}</div>
+          <div class="tt-value"><span>{{updown}} von </span>{{absVal}}% <span> im Vergleich zum vorherigen Haushalt.</span></div>
+          <div class="tt-item">{{readableData1617}} Euro werden für diesen Bereich eingeplant.</div>
+          <div class="tt-cta">Berühren Sie den Kreis um mehr zu erfahren.</div>
+        </div>
+    </script>
+    
+    <!-- Card Template -->
+    <script type="hogan/template" id="card-template">
+        <div class="card" id="{{id}}">
+            <div class="card-change">
+                <div><i class="fa {{iconClass}}"></i><span>{{percentage}}%</span></div>
+                <div class="absolute">{{readableData1617}} Euro</div>
+            </div>
+                
+            <div class="card-title-name">{{name}}</div>
+            <div class="card-subtitle">{{subtitle}}</div>
+
+            <div class="card-piratenfraktion">
+                <p class="card-piratenfraktion-title">Was die Piratenfraktion dazu sagt:</p>
+                <p>{{{fractionComment}}}</p>
+            </div>
+            
+            {{#showCitation}}
+            <div class="card-person clearfix">
+                <img src="{{personImage}}" />
+                <p class="card-person-name">{{personName}}</p>
+                <p class="card-person-description">{{{personDescription}}}</p>
+            </div>
+            {{/showCitation}}
+
+            
+        </div>
+    </script>
+    
+
+    <!-- Chart Info & Legend Template -->
+    <script type="hogan/template" id="chart-info-template">
+    {{{ chartInfo }}}
+    </script>
+
+    <!-- Chart Source Template -->
+    <script type="hogan/template" id="chart-source-template">
+    {{{ chartSource }}}
+    </script>
+
+    <!-- Scroll Top Template -->
+    <script type="hogan/template" id="scroll-top-template">
+          <i class="fa fa-arrow-up"></i>
+          <span>{{ scrollTopLabel }}</span>
+    </script>
+
+    <!-- 
+        <script src="url/of/data.js"></script>
+        <script src="url/of/main.js"></script>
+    -->
+
+
+    <!-- Wordpress Content End -->
+        
+
+    <script src="data/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

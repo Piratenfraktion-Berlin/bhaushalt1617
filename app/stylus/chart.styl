@@ -1,0 +1,113 @@
+.app-wrapper
+  #vis
+    font-size: 12px
+    position: relative
+    margin-bottom:3.5em
+    
+    tspan.bold
+      font-weight: bold
+
+    .loader
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      text-align: center
+      padding: 1em
+      font-size: 30px
+    &.loading .loader
+      display: block
+
+  .chart-info
+    position: absolute
+    right: 0
+    padding: 1em
+    top: 1em
+    max-width: 270px
+    background: rgba(255,255,255,.85)
+    
+    .legend
+      float: left
+    .info
+      float: right
+      width: 70%
+      color: #777
+      
+      strong
+        color: #444
+
+    .legend
+      circle
+        fill: none
+        stroke: #aaa
+        stroke-width: 1px
+      text
+        font-size: 10px
+        fill: #777
+
+  .axis path,
+  .axis line
+    fill: none
+    stroke: #000
+    shape-rendering: crispEdges
+
+  .y.axis 
+    path
+      display: none
+    
+    line
+      stroke: #bbb
+      stroke-dasharray: 3,2
+    
+    text
+      fill: #777
+
+    .zero line
+      stroke: #444
+      stroke-dasharray: none
+
+    .zero text
+      fill: #444
+      font-weight: bold
+
+  .bubble
+    fill-opacity: .8
+    cursor: pointer
+    
+    &.active
+      stroke-width: 2px
+  .bubble-label
+    display: none
+
+  .chart-tooltip
+    display: none
+    position: absolute
+    padding: 1em
+    background: rgba(255,255,255,.9)
+    z-index: 1000
+    width: 100%
+    max-width: 280px
+    box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.2)
+    border-radius: 4px
+    pointer-events: none
+
+    &.active
+      display: block
+    
+    .tt-title
+      text-transform: uppercase
+      font-weight: bold
+    .tt-value
+      color: #ef7f1a
+      font-weight: bold
+      margin: 10px 0
+      font-size: 16px
+      span
+        font-weight: normal
+        font-size: 14px
+    .tt-cta
+      color: #777
+      font-size: 12px
